@@ -1,10 +1,12 @@
-# Foundation libsass template
+# JMac Masonry
 
-This is a template to start your own project that uses Grunt and libsass!
+I built this website using Foundation 5 and owl-carousel.
+
+http://jmacmasonry.ca
 
 ## Requirements
 
-You'll need to have the following items installed before continuing.
+You'll need to have the following items installed before you can edit the website.
 
   * [Node.js](http://nodejs.org): Use the installer provided on the NodeJS website.
   * [Grunt](http://gruntjs.com/): Run `[sudo] npm install -g grunt-cli`
@@ -13,7 +15,7 @@ You'll need to have the following items installed before continuing.
 ## Quickstart
 
 ```bash
-git clone git@github.com:zurb/foundation-libsass-template.git
+git clone git@github.com:macCormack/JMac-Masonry.git
 npm install && bower install
 ```
 
