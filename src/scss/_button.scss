@@ -1,0 +1,223 @@
+
+@media #{$small-up} {
+  //BUTTON STYLES
+  button, .btn {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 1em 0;
+    margin-left: auto;
+    margin-right: auto;
+    color: $white;
+    background-color: $primary;
+    outline: 0;
+    border: 0;
+    font-size: 1.2em;
+    font-weight: 200;
+    text-align: center;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background-color: $secondary;
+    }
+
+  }
+
+  .main .btn {
+    margin-bottom: 2em;
+  }
+
+  .iconbox .btn {
+    width: 40%;
+    margin-left: 60%;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+
+  #btnEstimate {
+    position: relative;
+    bottom:0;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    transition: all 0.5s ease-in-out;
+  }
+
+  #btnEstimate.in-view {
+    position: fixed;
+    left: calc(50% - 951px/2);
+    bottom:0;
+    margin: 0;
+    z-index: 5;
+
+  }
+
+  .carousel__btns.active {
+      filter: Alpha(Opacity=100);/*IE7 fix*/
+    	opacity: 1;
+    }
+
+  .carousel__btns {
+    position: absolute;
+  	top: calc(50% - 48px);
+  	width: 100%;
+    filter: Alpha(Opacity=0);/*IE7 fix*/
+    opacity: 0.0;
+    transition: all 0.3s ease;
+
+    .prev, .next {
+      position: absolute;
+    	fill: $white;
+    	zoom: 1;
+    	*display: inline;/*IE7 life-saver */
+    	font-size: 12px;
+    	background: $jet;
+      cursor: pointer;
+    	filter: Alpha(Opacity=50);/*IE7 fix*/
+    	opacity: 0.5;
+
+      &:hover {
+        filter: Alpha(Opacity=100);/*IE7 fix*/
+      	opacity: 1;
+        background: rgba(0,0,0,.55);
+      }
+
+      svg {
+        vertical-align: middle;
+      }
+
+    }
+
+    .prev {
+      left: 1em;
+    }
+
+    .next {
+      right: 1em;
+
+      svg {
+        transform:scaleX(-1);
+      }
+    }
+  }
+
+  .btn.inline, .gallery__btn.inline {
+    float: left;
+    margin: 0 .5em 2em;
+    width:calc(50% - 1em);
+  }
+
+  .btn.full-width, .gallery__btn.full-width {
+    float: none;
+    width: calc(100% - 20px);
+  }
+
+  .gallery__btn {
+    background: transparent;
+    padding-top: 1.3em ;
+      &:hover {
+        background-color: transparent;
+      }
+
+      .btn__thumb, .btn__subtitle, .btn__title {
+        display: none;
+      }
+
+      .text-next, .text-prev {
+        display: inline-block;
+        color: #222;
+      }
+
+      svg {
+        vertical-align: middle;
+        margin-bottom: 5px;
+      }
+      svg.next {
+      transform:scaleX(-1);
+    }
+  }
+
+  .btn__prev {
+    text-align: left;
+  }
+
+  .btn__next {
+    text-align: right;
+  }
+
+  .btn__subtitle {
+    display: block;
+    font-size: 13px;
+  }
+
+  .btn__thumb {
+    position: absolute;
+    display: block;
+    top: -2.1em;
+    left: calc(50% - 35px);
+    width: 70px;
+    height: 70px;
+    border: 2px solid $white;
+    border-radius: 100px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.24);
+    overflow: hidden;
+
+    img {
+      height: 100%;
+  .btn__container {
+
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  .btn__thumb {
+    left: calc(50% - 37px);
+  }
+  }
+  }
+}
+
+@media #{$medium-up} {
+  button, .btn {
+    width: 50%;
+
+    &:hover {
+      background: $secondary;
+    }
+  }
+
+  button {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .btn__prev, .btn__next {
+    text-align: center;
+  }
+
+  .gallery__btn {
+    @extend button;
+    background: $primary;
+    display: block;
+    padding-top: 2.3em;
+    margin:0;
+
+    &:hover {
+      background-color: $secondary;
+    }
+
+    svg, .text-prev, .text-next {
+      display: none;
+    }
+
+    .btn__thumb, .btn__subtitle, .btn__title {
+      display: block;
+    }
+  }
+
+  .gallery__btn.single__btn {
+    width: calc(50% - 1em);
+    margin: 0 auto 2em auto;
+  }
+}

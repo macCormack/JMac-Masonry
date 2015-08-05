@@ -1,0 +1,279 @@
+@media only screen {
+  .description__container h2, .gallery__p {
+    text-align: left;
+    color: inherit;
+    margin-bottom: .2em
+  }
+
+  .description__container {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 1.5em 1em;
+
+    header p  {
+      text-align: left;
+      color: inherit;
+      margin-bottom: .2em
+    }
+
+    h2 {
+      font-size: 2em;
+    }
+  }
+
+  .counter__container {
+    display: inline-block;
+    width: calc(50% - 1rem);
+
+    h2 {
+      font-size: 2.3em;
+      margin-bottom: 0;
+    }
+
+    h2, p {
+      text-align: center !important;
+    }
+  }
+
+  .materials {
+    background-color: $primary;
+    color: $white;
+    padding: 1em;
+
+    p {
+      margin-bottom: 0.2em;
+    }
+
+    h1, p {
+      color: inherit!important;
+    }
+
+    h3 {
+      float: right;
+      margin: 1.4em 0;
+      width: 60%;
+      color: $white;
+      text-transform: uppercase;
+      letter-spacing: 1.2px
+    }
+
+    ul {
+      li {
+        display: inline-block;
+      }
+    }
+  }
+
+  .materials__inner {
+    padding: 0 1em;
+  }
+
+  .materials__icon {
+    position: relative;
+    float: left;
+    padding: 0.6em;
+    margin-bottom: 1em;
+    width: 70px;
+    height: 70px;
+    border:1px solid $white;
+    border-radius: 100px;
+    clear: both;
+
+    svg {
+      width: 50px;
+      height: 50px;
+
+      .rect {
+        fill: $white;
+      }
+      .circle {
+        fill: $primary;
+      }
+
+      .shadow {
+        opacity: 0.5;
+        fill:$secondary;
+      }
+
+      .st1 {
+        fill:$primary;
+      }
+    }
+  }
+
+  .materials__info {
+    position: relative;
+    width: 70%;
+    padding-left: 1em;
+    top: -20px;
+  }
+
+  .gallery__left, .gallery__right {
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: $small-breakpoint) {
+  .description__container {
+    float: left;
+    width: 33%;
+    margin: 0 8.5%;
+    padding: 1.5em 0;
+  }
+
+  .materials {
+    padding-top: 3em;
+    height: 500px;
+
+    h3 {
+
+    }
+  }
+
+  .materials__inner {
+    padding-left: 1rem;
+  }
+
+  .materials__icon {
+    float: left;
+    display: block;
+  }
+
+  .materials__info {
+    top: 0;
+    float: left;
+    width: 60%;
+  }
+
+  .carousel {
+
+    img {
+      display: block;
+      height: 500px;
+    }
+  }
+
+  .gallery__left, .gallery__right {
+    display: none;
+    position: fixed;
+    height: 80px;
+    top: 50%;
+    background: #aaa;
+    background: rgba(0,0,0,0.24);
+    color: #fff;
+    margin-top: -55px;
+    padding: 15px;
+    text-decoration: none;
+    z-index: 5;
+    transition:all 0.3s ease;
+
+    &:hover {
+      background-color: rgba(0,0,0,.8);
+      .gallery__infoWrap {
+        width: 240px;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: calc(50% - 20px);
+      width: 40px;
+      height: 40px;
+      fill:$white;
+    }
+  }
+
+  .gallery__left .entry__info {
+    margin:0 1px 0 20px;
+  }
+
+  .gallery__left svg {
+    left: -8px;
+    }
+
+  .gallery__infoWrap {
+    width: 0px;
+    overflow: hidden;
+    display: block;
+    transition:all 0.3s ease;
+  }
+
+  .entry__info {
+    display: block;
+    height: 80px;
+    width: 220px;
+    display: table;
+
+    span {
+      display: table-cell;
+      vertical-align: middle;
+      font-size: 13px;
+      line-height: 1.65em;
+    }
+  }
+
+  .entry__image img {
+    border-radius: 100px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .gallery__right {
+    text-align: right;
+    right: 0;
+
+    svg {
+      transform:scaleX(-1);
+      right: -5px;
+    }
+
+    .entry__info {
+      margin: 0 20px 0 1px;
+    }
+  }
+}
+
+@media only screen and (min-width: $medium-breakpoint) {
+  .materials h3 {
+    width: 72%;
+    float: right;
+    margin: 1.4em 0;
+  }
+
+  .materials {
+    height: 550px;
+  }
+
+  #slideshow {
+    position: relative;
+  }
+
+  .carousel img {
+    height: 550px;
+  }
+
+}
+
+@media only screen and (min-width: $large-breakpoint) {
+  .materials {
+    padding: 10em 0 1em;
+    height: 750px;
+
+    h3 {
+    }
+  }
+
+  .materials__inner {
+    padding:0 4em;
+  }
+
+  .carousel img {
+    height: 750px;
+  }
+
+  .single__carousel img {
+    height: 950px;
+  }
+}
